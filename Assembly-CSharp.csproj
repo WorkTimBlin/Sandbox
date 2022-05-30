@@ -57,6 +57,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\AttractorLine.cs" />
+    <Compile Include="Assets\AttractorParticleSystem.cs" />
     <Compile Include="Assets\Attractors\ISpeedByPositionCalculator.cs" />
     <Compile Include="Assets\Attractors\LorenzAttractor.cs" />
     <Compile Include="Assets\Attractors\RosslerAttractor.cs" />

@@ -21,7 +21,7 @@ public class LorenzAttractor : MonoBehaviour, ISpeedByPositionCalculator
 	void ValidateInterfaces()
 	{
 		parameterChangeListener =
-			parameterChangeListener.GetComponent<IParameterChangeListener>()
+			parameterChangeListener?.GetComponent<IParameterChangeListener>()
 			as MonoBehaviour;
 	}
 
