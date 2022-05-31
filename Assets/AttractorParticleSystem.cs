@@ -11,8 +11,6 @@ public class AttractorParticleSystem : MonoBehaviour
 
 	[Header("Parameters")]
 	[SerializeField]
-	int numberOfParticles = 10000;
-	[SerializeField]
 	[Range(0, 2)]
 	float sizeCoefficent = 1;
 	[SerializeField]
@@ -24,16 +22,12 @@ public class AttractorParticleSystem : MonoBehaviour
 
 	ISpeedByPositionCalculator SpeedCalculator =>
 		(ISpeedByPositionCalculator)speedCalculator;
-	// Start is called before the first frame update
-	void Start()
-	{
-		
-	}
 
 	// Update is called once per frame
 	void Update()
 	{
-		ParticleSystem.Particle[] particles = new ParticleSystem.Particle[1000];
+		ParticleSystem.Particle[] particles = 
+			new ParticleSystem.Particle[particleSystem.main.maxParticles];
 		particleSystem.GetParticles(particles);
 		particles = particles.Select((particle) =>
 		{
